@@ -395,6 +395,43 @@
         </footer>
 
     </div>
+
+    <script type="text/javascript" charset="utf-8">
+
+      fetch("./data.json")
+          .then(function (response) {
+              return response.json();
+          }).then(function (apiJsonData) {
+              //console.log(apiJsonData);
+              useJsonData(apiJsonData)
+              //console.log(apiJsonData.section2[0].text);
+          })
+
+      function useJsonData(jsonData){
+          
+          // document.getElementById("griffith_image").src=jsonData.section2[0].image;
+          // document.getElementById("mountains_image").src=jsonData.section2[1].image;
+          // document.getElementById("universalstudios_image").src=jsonData.section2[2].image;
+          // document.getElementById("griffith_text").innerHTML=jsonData.section2[0].text;
+          // document.getElementById("mountains_text").innerHTML=jsonData.section2[1].text;
+          // document.getElementById("universalstudios_text").innerHTML=jsonData.section2[2].text;
+
+          const image="<img style=\"height: 280px; width: 490px; float: right; margin-left: 30px;\" src=\"lasky.png\">";
+          document.getElementById("laskyline_text").innerHTML="<img style=\"height: 280px; width: 490px; float: right; margin-left: 30px;\" src=\"lasky.png\">"+jsonData["section3"].text[0]+"<br>"+jsonData["section3"].text[1];
+
+          document.getElementById("hollywood_image").src=jsonData.section4[0].image;
+          document.getElementById("beaches_image").src=jsonData.section4[1].image;
+          document.getElementById("hollywood_heading").innerHTML=jsonData.section4[0].heading;
+          document.getElementById("beaches_heading").innerHTML=jsonData.section4[1].heading;
+          document.getElementById("hollywood_text").innerHTML=jsonData.section4[0].text;
+          document.getElementById("beaches_text").innerHTML=jsonData.section4[1].text;
+
+
+
+      }
+
+  </script>
+
     </body>
   </html>
 
