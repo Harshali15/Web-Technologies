@@ -295,29 +295,21 @@
         </section>
         <div class="cards">
           <div id="card1">
-            <div id="card1 img"><img src="griffith.jpg"></div>
+            <div id="card1 img"><img id="griffith_image" src=""></div>
               <p style="font-size: 17px; line-height: 0.8;">Griffith Observatory</p>
-              <p>Griffith Observatory is southern California's gateway to the cosmos! Visitors may 
-                look through telescopes, explore exhibits, see live shows in the Samuel Oschin
-                Planetarium, and enjoy spectacular views of Los Angeles and the Hollywood Sign.</p>
+              <p id="griffith_text"></p>
           </div>
         
           <div id="card2">
-            <div id="card1 img"><img src="mountains.jpg"></div>
+            <div id="card1 img"><img id="mountains_image" src=""></div>
               <p style="font-size: 17px; line-height: 0.8;">Mountains</p>
-              <p>Soaring high above the Los Angeles Basin, the San Gabriel Mountains serves as the 
-                backyard to the nation's second-largest urban center. This chaparral-cloaked land 
-                of steep ridges and V-shaped canyons is one of the wildest remaining areas in the 
-                surrounding Angeles National Forest</p>
+              <p id="mountains_text"></p>
           </div>
         
           <div id="card3">
-            <div id="card1 img"><img src="universalstudios.jpg"></div>
+            <div id="card1 img"><img id="universal_image" src=""></div>
               <p style="font-size: 17px; line-height: 0.8;">Universal Studios</p>
-              <p>Find a full day of action-packed entertainment all in one place: thrilling Theme Park 
-                rides and shows, a real working movie studio, and Los Angeles' best shops, restaurants 
-                and cinemas at CityWalk. Universal Studios Hollywood is a unique experience that's fun
-                  for the whole family.</p>
+              <p id="universal_text"></p>
           </div>
         </div>
 
@@ -409,12 +401,12 @@
 
       function useJsonData(jsonData){
           
-          // document.getElementById("griffith_image").src=jsonData.section2[0].image;
-          // document.getElementById("mountains_image").src=jsonData.section2[1].image;
-          // document.getElementById("universalstudios_image").src=jsonData.section2[2].image;
-          // document.getElementById("griffith_text").innerHTML=jsonData.section2[0].text;
-          // document.getElementById("mountains_text").innerHTML=jsonData.section2[1].text;
-          // document.getElementById("universalstudios_text").innerHTML=jsonData.section2[2].text;
+          document.getElementById("griffith_image").src=jsonData.section2[0].image;
+          document.getElementById("mountains_image").src=jsonData.section2[1].image;
+          document.getElementById("universal_image").src=jsonData.section2[2].image;
+          document.getElementById("griffith_text").innerHTML=jsonData.section2[0].text;
+          document.getElementById("mountains_text").innerHTML=jsonData.section2[1].text;
+          document.getElementById("universal_text").innerHTML=jsonData.section2[2].text;
 
           const image="<img style=\"height: 280px; width: 490px; float: right; margin-left: 30px;\" src=\"lasky.png\">";
           document.getElementById("laskyline_text").innerHTML="<img style=\"height: 280px; width: 490px; float: right; margin-left: 30px;\" src=\"lasky.png\">"+jsonData["section3"].text[0]+"<br>"+jsonData["section3"].text[1];
