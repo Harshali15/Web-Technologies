@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    width: 1438px;
+}
+h1{
+    margin-top: 20px;
+    color: brown;
+}
+h2{
+    margin-top: 20px;
+    color: brown;
+}
+label{
+    display: inline-block;
+    width: 95px;
+    font-size: x-large;
+    height: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+form{
+    margin-top: 30px;
+}
+div{
+    margin-bottom: 25px;
+}
+#submit-btn{
+    width: 120px;
+    height: 40px;
+    background-color: #506ba7;
+    font-size: 20px;
+    color: white;
+}
+input[type='number']{
+    width: 200px;
+    height: 30px;
+}
+.required{
+    color: red;
+}
+.age-lbl-in{
+    background-color: aqua;
+}

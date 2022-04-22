@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+        <h1>Blood Pressure Predictor</h1>
+        <h2>Fill out the form to get your Blood Pressure estimate!</h2>
+        <form method="post">
+            <div>
+                <label for="age">Age <span class="required">*</span></label>
+                <input type="number" id="age" name="age" placeholder="Enter age in years" required
+                value="{{ request.form['age'] }}">
+            </div>
+            <div>
+                <label for="weight">Weight <span class="required">*</span></label>
+                <input type="number" id="weight" name="weight" placeholder="Enter weight in kg" required
+                value="{{ request.form['weight'] }}">
+            </div>
+            <div>
+                <input type="submit" id="submit-btn" value="Calculate">
+            </div>
+        </form>
+        <div>
+            <span id="prediction" name="prediction"><b>{{prediction}}</b></span>
+        </div>
+    </body>
+</html>
